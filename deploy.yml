@@ -5,8 +5,9 @@
       git:
         repo: 'https://github.com/cool129/weather_report_nelson.git'
         dest: '/tmp/weather_report_nelson'
-    
+
     - name: Copy CSV to /tmp
       copy:
         src: '/tmp/weather_report_nelson/Final.report.CSV'
         dest: '/tmp/Final.report.CSV'
+        remote_src: yes

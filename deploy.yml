@@ -8,6 +8,6 @@
 
     - name: Copy CSV to /tmp
       copy:
-        src: '/tmp/weather_report_nelson/Final.report.CSV'
+        src: '/tmp/weather_report_nelson/Final.report.CSV.csv'
         dest: '/tmp/Final.report.CSV'
         remote_src: yes

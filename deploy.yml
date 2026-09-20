@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Copy Final.report.CSV to /tmp on qa_server
+      copy:
+        src: Final.report.CSV
+        dest: /tmp/Final.report.CSV
+        mode: '0644'

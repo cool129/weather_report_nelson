@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t weather-report-nelson:latest .'
+                    sh 'docker build -t weather-report-nelson:latest -f backend/Dockerfile ./backend'
                 }
             }
         }
@@ -20,14 +20,6 @@ pipeline {
             steps {
                 script {
                     sh 'docker run -d --name weather-app weather-report-nelson:latest'
-                }
-            }
-        }
-        
-        stage('Run Weather Report Script') {
-            steps {
-                script {
-                    sh 'docker exec weather-app node server.js'
                 }
             }
         }
